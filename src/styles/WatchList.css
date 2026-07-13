@@ -44,3 +44,25 @@
     color:#9d9d9d;
 
 }
+
+@media(max-width:768px){
+
+    .watchList-empty{
+        max-width: 250px;
+
+        margin:0 auto 30px;
+
+        line-height:1.6;
+
+        text-align: center;
+    }
+
+    .watchList-empty h2{
+
+        font-size:3rem;
+
+        padding:25px 35px;
+
+    }
+
+}

@@ -16,6 +16,12 @@
     box-shadow:0 20px 40px rgba(245,196,81,.18);
 }
 
+.movie-actions{
+
+    display:none;
+
+}
+
 .movie-poster{
     position:relative;
     height:360px;
@@ -205,6 +211,13 @@
     .movie-poster{
         height:320px;
     }
+
+    .movie-actions{
+
+        display:flex;
+
+    }
+
 }
 
 @media(max-width:480px){

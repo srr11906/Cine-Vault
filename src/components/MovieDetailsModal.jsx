@@ -26,6 +26,15 @@ function MovieDetailsModal({ movie, isOpen, onClose }) {
         loadDetails();
     }, [movie]);
 
+    useEffect(() => {
+        if(isOpen){
+            document.body.style.overflow = "hidden";
+        }
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isOpen]);
+
     async function handleTrailerClick() {
             try{
                 const trailerUrl = await getMovieTrailer(movie.id);

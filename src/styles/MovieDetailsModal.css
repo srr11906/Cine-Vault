@@ -166,13 +166,35 @@
 
     grid-template-columns:1fr;
 
+    width:95%;
+
+    gap:18px;
+
+    padding:18px;
+
+    border-radius:18px;
+
 }
 
 .modal-left img{
 
-    max-width:260px;
+    max-width:200px;
 
     margin:auto;
+
+    border-radius: 14px;
+
+}
+
+ .modal-right{
+
+    gap:8px;
+
+}
+
+.modal-right h1{
+
+    font-size:1.5rem;
 
 }
 

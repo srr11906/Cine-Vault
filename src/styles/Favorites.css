@@ -80,3 +80,25 @@
     box-shadow:0 0 18px rgba(245,81,81,.4);
 
 }
+
+@media(max-width:768px){
+
+    .favorites-empty{
+        max-width: 250px;
+
+        margin:0 auto 30px;
+
+        line-height:1.6;
+
+        text-align: center;
+    }
+
+    .favorites-empty h2{
+
+        font-size:3rem;
+
+        padding:25px 35px;
+
+    }
+
+}
