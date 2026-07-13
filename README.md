@@ -4,6 +4,12 @@ A modern movie discovery web application built with **React** and powered by the
 
 ---
 
+## 🌐 Live Demo
+
+https://cine-vault-srr.vercel.app
+
+---
+
 ## ✨ Features
 
 * 🔍 Search movies by title
