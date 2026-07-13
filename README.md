@@ -1,17 +1,113 @@
-# React + Vite
+# 🎬 Cine Vault
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern movie discovery web application built with **React** and powered by the **TMDB API**. Explore trending movies, search for your favorites, watch trailers, save movies to your Favorites and Watchlist, and discover detailed movie information through a clean, responsive interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+* 🔍 Search movies by title
+* 🌐 Filter movies by language
+* 🎭 Filter movies by genre
+* 📅 Filter movies by release year
+* 📄 Load More pagination
+* ❤️ Add or remove movies from Favorites
+* 📋 Create a personal Watchlist
+* 💾 Persistent Favorites & Watchlist using Local Storage
+* 🎬 Watch official movie trailers
+* ℹ️ Detailed movie information modal
+* ⚡ Skeleton loading for a smoother experience
+* 📤 Share your favorite movies using the Web Share API (with clipboard fallback)
+* 📱 Fully responsive UI
+* 🎨 Modern Glassmorphism design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Cine-Vault
+* React
+* JavaScript (ES6+)
+* Vite
+* CSS3
+* TMDB API
+* React Router
+* Context API
+* Local Storage
+* Web Share API
+* Clipboard API
+
+---
+
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/srr11906/cine-vault.git
+cd cine-vault
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Create a `.env` file
+
+```env
+VITE_TMDB_API_KEY=YOUR_TMDB_API_KEY
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+src
+├── components
+├── context
+├── pages
+├── services
+├── styles
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## 🎯 Future Improvements
+
+* Disable background scrolling while modal is open
+* Infinite scrolling
+* Similar movie recommendations
+* Cast and crew information
+* Dark/Light theme toggle
+* User authentication
+
+---
+
+## 🌐 API
+
+This project uses **The Movie Database (TMDB) API** to fetch movie information, trailers, genres, and metadata.
+
+---
+
+## 📄 License
+
+This project is intended for educational and portfolio purposes.
+
+---
+
+## 👨‍💻 Author
+
+**Sai Rishik Reddy**
+
+If you found this project useful, consider giving it a ⭐ on GitHub!

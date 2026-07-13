@@ -1,0 +1,46 @@
+.watchList-empty{
+
+    min-height:65vh;
+
+    display:flex;
+
+    flex-direction: column;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.watchList-empty h2{
+
+    padding:35px 45px;
+
+    border-radius:20px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid var(--glass-border);
+
+    color:var(--primary);
+
+    font-size:4rem;
+
+    text-align:center;
+}
+
+
+.watchList-empty h3{
+
+     margin: 40px auto 30px;
+
+}
+
+.watchList-empty p{
+
+     margin: 0 auto 30px;
+
+    color:#9d9d9d;
+
+}
