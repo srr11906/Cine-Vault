@@ -17,12 +17,13 @@ function Home(){
     const [page, setPage] = useState(1);
     const [selectedMovie, setSelectedMovie] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isSearchMode, setIsSearchMode] = useState(false);
     
     const loadMovies = async () => {
         setLoading(true);
         try{
             const data = await getMovies(language, genre, year, 1);
-
+            setIsSearchMode(false);
             setMovies(data);
             setPage(1);
             setError(null);
@@ -55,11 +56,13 @@ function Home(){
         e.preventDefault();
 
         if (!searchQuery.trim()) {
+            setIsSearchMode(false);
             const movies = await getMovies(language, genre, year, 1);
             setMovies(movies);
             return;
         }
-
+        
+        setIsSearchMode(true);
         const results = await searchMovies(searchQuery);
         setMovies(results);
     };
@@ -159,7 +162,7 @@ function Home(){
                 )}
             </div>
 
-            {movies.length > 0 && (
+            {movies.length > 0 && !isSearchMode && (
                 <button
                     onClick={loadMore}
                     className="load-more-btn"

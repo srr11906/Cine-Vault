@@ -20,6 +20,10 @@
 
 }
 
+.modal-actions{
+    display:none;
+}
+
 .movie-modal{
 
     position:relative;
@@ -215,14 +219,6 @@
     .modal-right h1{
 
         font-size:1.3rem;
-
-    }
-
-    .overview{
-
-        font-size:.9rem;
-
-        line-height:1.5;
 
     }
 

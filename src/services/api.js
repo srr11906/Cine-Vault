@@ -57,7 +57,6 @@ export const getMovies = async (
         }
 
         const data = await response.json();
-        console.log(data);
 
         const trailer = data.results.find(
             (video) =>
