@@ -162,40 +162,72 @@
 
 @media(max-width:768px){
 
-.movie-modal{
+    .movie-modal{
 
-    grid-template-columns:1fr;
+        grid-template-columns:1fr;
 
-    width:95%;
+        width:95%;
 
-    gap:18px;
+        gap:18px;
 
-    padding:18px;
+        padding:18px;
 
-    border-radius:18px;
+        border-radius:18px;
 
-}
+    }
 
-.modal-left img{
+    .modal-actions{
 
-    max-width:200px;
+        display:flex;
 
-    margin:auto;
+        justify-content: flex-start;
 
-    border-radius: 14px;
+        width: 100%;
 
-}
+        gap:15px;
 
- .modal-right{
+        margin-top:15px;
 
-    gap:8px;
+    }
 
-}
+    .modal-left img{
 
-.modal-right h1{
+        max-width:100px;
 
-    font-size:1.5rem;
+        margin:auto;
 
-}
+        border-radius: 14px;
+
+    }
+
+    .modal-right{
+
+        gap:8px;
+
+    }
+
+    .modal-right h1{
+
+        font-size:1.5rem;
+
+    }
+
+    .overview{
+
+        font-size:.9rem;
+
+        line-height:1.5;
+
+    }
+
+    .close-btn{
+
+        width:36px;
+
+        height:36px;
+
+        font-size:16px;
+
+    }
 
 }

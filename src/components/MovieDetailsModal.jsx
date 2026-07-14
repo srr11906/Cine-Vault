@@ -2,11 +2,35 @@ import { useEffect, useState } from "react";
 import "../styles/MovieDetailsModal.css";
 import { getMovieDetails } from "../services/api";
 import { getMovieTrailer } from "../services/api";
+import { useFavorites } from "../context/FavoritesContext";
+import { useWatchList } from "../context/WatchListContext";
 
 function MovieDetailsModal({ movie, isOpen, onClose }) {
 
     const [details, setDetails] = useState(null);
     const [loading, setLoading] = useState(false);
+
+    const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites();
+    const favorite = movie ? isFavorite(movie.id) : false;
+
+    const { addToWatchList, removeFromWatchList, isInWatchList } = useWatchList();
+    const watchlist = movie ? isInWatchList(movie.id) : false;
+
+    function onFavoriteClick() {
+        if (isFavorite(movie.id)) {
+            removeFromFavorites(movie.id);
+        } else {
+            addToFavorites(movie);
+        }
+    }
+
+    function onWatchListClick() {
+        if (isInWatchList(movie.id)) {
+            removeFromWatchList(movie.id);
+        } else {
+            addToWatchList(movie);
+        }
+    }
 
     useEffect(() => {
         if (!movie) return;
@@ -116,6 +140,21 @@ function MovieDetailsModal({ movie, isOpen, onClose }) {
                             <p className="overview">
                                 {movie.overview}
                             </p>
+
+                            <div className="modal-actions">
+                                <button title={favorite? "Remove from Favorites" : "Add to Favorites"} className="fav-wl-btn" onClick={(e) => {
+                                    e.stopPropagation();
+                                    onFavoriteClick();
+                                }}>
+                                    {favorite ? "❤️" : "🤍"}
+                                </button>
+                                <button title={watchlist ? "Remove from WatchList" : "Add to WatchList"} className="fav-wl-btn" onClick={(e) => {
+                                    e.stopPropagation();
+                                    onWatchListClick();
+                                }}>
+                                    {watchlist ? "☑️" : "📋"}
+                                </button>
+                            </div>
 
                             <a className="modal-trailer-btn" onClick={() => {
                                 handleTrailerClick();

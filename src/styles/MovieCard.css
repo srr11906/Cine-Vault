@@ -208,6 +208,11 @@
 }
 
 @media(max-width:768px){
+
+    .movie-overlay{
+        display:none;
+    }
+
     .movie-poster{
         height:320px;
     }
