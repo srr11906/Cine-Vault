@@ -75,3 +75,19 @@
     }
 
 }
+
+@media(max-width:768px){
+
+    .skeleton-card{
+
+        width:180px;
+
+    }
+
+    .skeleton-poster{
+
+        height:320px;
+
+    }
+
+}
